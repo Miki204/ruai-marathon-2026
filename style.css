@@ -1,0 +1,796 @@
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #ffffff;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0b5d1e;
+}
+
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: #222222;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #0b5d1e;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.event-label {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-content > p {
+    font-size: 18px;
+    max-width: 750px;
+    margin: 0 auto 30px;
+}
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.event-details div {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.event-details strong,
+.event-details span {
+    display: block;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #0b5d1e;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #084515;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #0b5d1e;
+}
+
+.btn-secondary:hover {
+    background: #eeeeee;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    color: #0b5d1e;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #f7f7f7;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.mission-box {
+    padding: 35px;
+    background: #ffffff;
+    border-left: 5px solid #0b5d1e;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.mission-box h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+
+/* =========================
+   RACE CATEGORIES
+========================= */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+}
+
+.category-card h3 {
+    font-size: 38px;
+    color: #0b5d1e;
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    margin-bottom: 20px;
+}
+
+.category-card a {
+    color: #0b5d1e;
+    font-weight: bold;
+}
+/* =========================
+   COUNTDOWN TIMER
+========================= */
+
+.countdown {
+    margin: 25px auto 30px;
+}
+
+.countdown h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.countdown-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.countdown-boxes div {
+    min-width: 85px;
+    padding: 12px 10px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.countdown-boxes span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.countdown-boxes small {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+/* MOBILE COUNTDOWN */
+
+@media (max-width: 768px) {
+
+    .countdown-boxes {
+        gap: 8px;
+    }
+
+    .countdown-boxes div {
+        min-width: 70px;
+        padding: 10px 7px;
+    }
+
+    .countdown-boxes span {
+        font-size: 22px;
+    }
+}
+/* ================= SUPPORT THE CAUSE ================= */
+
+.donate-section {
+    padding: 80px 20px;
+    background: #f5f8f5;
+    text-align: center;
+}
+
+.donate-section .section-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.donate-section .section-label {
+    display: block;
+    color: #0b5d1e;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.donate-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0b5d1e;
+}
+
+.donate-section .section-heading p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.donate-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.donate-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #0b5d1e;
+}
+
+.donate-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.donate-card .btn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .donate-section {
+        padding: 60px 15px;
+    }
+
+    .donate-section h2 {
+        font-size: 30px;
+    }
+
+    .donate-card {
+        padding: 30px 20px;
+    }
+
+}
+/* ================= RACE CATEGORIES ================= */
+
+.race-section {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.race-section .section-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.race-section .section-label {
+    display: block;
+    color: #0b5d1e;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.race-section h2 {
+    font-size: 36px;
+    color: #0b5d1e;
+    margin-bottom: 20px;
+}
+
+.race-section .section-heading p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.race-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.race-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 320px;
+    padding: 35px 25px;
+    background: #f5f8f5;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.race-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.race-card h3 {
+    font-size: 32px;
+    color: #0b5d1e;
+    margin-bottom: 10px;
+}
+
+.race-card p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.race-card .btn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .race-section {
+        padding: 60px 15px;
+    }
+
+    .race-section h2 {
+        font-size: 30px;
+    }
+
+    .race-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .race-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+/* ================= EVENT SCHEDULE ================= */
+
+.schedule-section {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.schedule-section .section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.schedule-section .section-label {
+    display: block;
+    color: #0b5d1e;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.schedule-section h2 {
+    font-size: 36px;
+    color: #0b5d1e;
+    margin-bottom: 20px;
+}
+
+.schedule-section .section-heading p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.schedule-list {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    margin-bottom: 18px;
+    background: #f5f8f5;
+    border-left: 5px solid #0b5d1e;
+    border-radius: 8px;
+}
+
+.schedule-time {
+    min-width: 130px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0b5d1e;
+}
+
+.schedule-details h3 {
+    margin-bottom: 8px;
+    color: #222;
+    font-size: 20px;
+}
+
+.schedule-details p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+    .schedule-section {
+        padding: 60px 15px;
+    }
+
+    .schedule-section h2 {
+        font-size: 30px;
+    }
+
+    .schedule-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 22px;
+    }
+
+    .schedule-time {
+        min-width: auto;
+    }
+}
+/* ================= REGISTRATION ================= */
+
+.register-section {
+    padding: 80px 20px;
+    background: #f5f8f5;
+    text-align: center;
+}
+
+.register-section .section-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.register-section .section-label,
+.contact-section .section-label {
+    display: block;
+    color: #0b5d1e;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.register-section h2,
+.contact-section h2 {
+    font-size: 36px;
+    color: #0b5d1e;
+    margin-bottom: 20px;
+}
+
+.register-section .section-heading p,
+.contact-section .section-heading p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.register-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.register-card h3 {
+    color: #0b5d1e;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.register-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact-section .section-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.contact-card {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: #f5f8f5;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.contact-card h3 {
+    color: #0b5d1e;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: #0b5d1e;
+    text-decoration: none;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+
+    .register-section,
+    .contact-section {
+        padding: 60px 15px;
+    }
+
+    .register-section h2,
+    .contact-section h2 {
+        font-size: 30px;
+    }
+
+    .register-card,
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ================= FOOTER ================= */
+
+.site-footer {
+    background: #0b5d1e;
+    color: #ffffff;
+    padding: 50px 20px 25px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+}
+/* ================= MOBILE NAVIGATION ================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+}
